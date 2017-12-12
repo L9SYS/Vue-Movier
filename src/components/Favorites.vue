@@ -39,7 +39,6 @@ export default {
 	},
 	created () {
 		this.$store.commit(types.SET_FAV, '')
-		this.$store.dispatch(types.GET_GENRES)
 	},
 	computed: {
 		mf() {
@@ -49,6 +48,7 @@ export default {
 	methods: {
 		getImage(img) {
 			return this.$store.getters.getImage(img)
+			this.$store.commit(types.CLEAR_FAV, '')
 		},
 		addFav(obj){
 			this.$store.commit(types.SET_FAV, obj)

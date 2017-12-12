@@ -7,7 +7,7 @@ const encode = data => {
 }
 
 const host = 'https://api.themoviedb.org/3'
-const api_key = '{{API_KEY}}'
+const api_key = '{{ YOUR_API_KEY }}}'
 
 class Api {
 	

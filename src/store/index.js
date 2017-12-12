@@ -102,29 +102,35 @@ export default new Vuex.Store({
 			if(obj.id){
 				if (favsOrder.length) {
 					if(favsOrder.indexOf(obj.id) === 0||favsOrder.indexOf(obj.id) > 0){
-						favs.splice(favs.indexOf(obj.id), 1)
-						favsOrder.splice(favs.indexOf(obj.id), 1)
+						for (let i=0; i<favs.length; i++) {
+							if (favs[i].id === obj.id){
+								favs.splice(i, 1)
+							}
+						}
+						favsOrder.splice(favsOrder.indexOf(obj.id), 1)
+						storage.set('favs',favs)
+						storage.set('favsOrder',favsOrder)
 					}else{
-						favs.push(obj.id);
-						favsOrder.push(obj.id);
-						favs[obj.id] = JSON.parse(JSON.stringify(obj))
+						favsOrder.push(obj.id)
+						favs.push(obj)
+						storage.set('favs',favs)
+						storage.set('favsOrder',favsOrder)
 					}
 				}else{
-					favs.push(obj.id);
-					favsOrder.push(obj.id);
-					favs[obj.id] = JSON.parse(JSON.stringify(obj))
+					favsOrder.push(obj.id)
+					favs.push(obj)
+					storage.set('favs',favs)
+					storage.set('favsOrder',favsOrder)
 				}
-				storage.set('favs',favs) 
-				storage.set('favsOrder',favsOrder)
 			}
 			state.favs = storage.get('favs') || []
 			state.favsOrder = storage.get('favsOrder') || []
 		},
-		[types.CLEAR_FAV]: (state, data) => {
-			state.favs = []
-			state.favsOrder = []
+		[types.CLEAR_FAV]: (state,data) => {
 			storage.remove('favs') 
 			storage.remove('favsOrder')
+			state.favs = []
+			state.favsOrder = []
 		},
 		[types.SET_MOVE_DETAIL_ID]: (state, data) => {
 			state.dId =  data
@@ -148,7 +154,7 @@ export default new Vuex.Store({
 			return state.total
 		},
 		getFavs(state) {
-			return state.favsOrder.map(id => state.favs[id])
+			return state.favs
 		},
 		getFavsOrder(state) {
 			return state.favsOrder
