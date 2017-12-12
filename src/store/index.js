@@ -97,8 +97,6 @@ export default new Vuex.Store({
 			})
 		},
 		[types.SET_FAV]: (state,obj) => {
-			console.log(obj.id,'**********************');
-			console.log(obj,'<<<<<<<<<<<<<<<<');
 			let favs = storage.get('favs') || []
 			let favsOrder = storage.get('favsOrder') || []
 			if(obj.id){
