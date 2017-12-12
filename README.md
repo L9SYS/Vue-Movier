@@ -9,6 +9,7 @@ https://developers.themoviedb.org/3
 3. Vue-router
 
 ### Настройка
+https://developers.themoviedb.org/3/getting-started/introduction
 
 vuemovier/src/store/api.js
 
