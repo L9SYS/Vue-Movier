@@ -43,7 +43,6 @@ export default {
 	},
 	computed: {
 		mf() {
-			console.log(this.$store.getters.getFavs);
 			return this.$store.getters.getFavs
 		}
 	},
