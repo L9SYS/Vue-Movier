@@ -13,7 +13,7 @@ https://developers.themoviedb.org/3/getting-started/introduction
 
 vuemovier/src/store/api.js
 
-##DEMO
+### Live-Demo
 https://mdb.bubeev.ru/
 
 ``` bash
