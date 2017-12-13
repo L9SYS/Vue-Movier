@@ -16,6 +16,9 @@ vuemovier/src/store/api.js
 ### Live-Demo
 https://mdb.bubeev.ru/
 
+
+### Установка
+
 ``` bash
 
 # установка зависимостей
