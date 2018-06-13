@@ -1,31 +1,28 @@
 # Vue Movier
+SPA billboard shows by **The Movie Database API**.
+https://developers.themoviedb.org/3
 
-Одностраничное приложение для просмотра фильмов с помощью **The Movie Database API**.
-https://developers.themoviedb.org/3 
-
-### Технологии
+### Used technologies:
 1. Vue 2
 2. Vuex
 3. Vue-router
 
-### Настройка
+### Info:
 https://developers.themoviedb.org/3/getting-started/introduction
 
-vuemovier/src/store/api.js
 
 ### Live-Demo
 https://mdb.bubeev.ru/
 
-
-### Установка
+### Installation
 
 ``` bash
 
-# установка зависимостей
+# Setting up:
 npm install
 
-# запуск сервера localhost:8080
+# Server startup (localhost:8080)
 npm run dev
 
-# сборка
+# Build
 npm run build
