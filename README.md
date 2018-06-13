@@ -1,6 +1,6 @@
 # Vue Movier
 SPA billboard shows by **The Movie Database API**.
-https://developers.themoviedb.org/3
+https://www.themoviedb.org
 
 ### Used technologies:
 1. Vue 2
