@@ -8,11 +8,10 @@ https://developers.themoviedb.org/3
 3. Vue-router
 
 ### Info:
-https://developers.themoviedb.org/3/getting-started/introduction
+https://www.themoviedb.org/documentation/api
 
 
 ### Live-Demo
-https://mdb.bubeev.ru/
 
 ### Installation
 
